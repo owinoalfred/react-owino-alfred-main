@@ -1,5 +1,5 @@
 import React from "react";
-import { [] } from "react-lazy-load-image-component";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import content from "../content";
 import useWindowPosition from "../hook/useWindowPosition";
@@ -17,7 +17,7 @@ export default function Work() {
       <h1 className="text-5xl font-dosis font-bold">{content.work.title}</h1>
       <p className="text-gray-600 text-2xl font-dosis mb-10">I have created</p>
       <div className="flex flex-col md:flex-row justify-between items-center w-11/12 ">
-        <[]
+        <LazyLoadImage
           effect="blur"
           placeholderSrc={content.work.imgPlaceholder}
           src={content.work.img}
