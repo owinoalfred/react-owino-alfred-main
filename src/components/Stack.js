@@ -1,5 +1,5 @@
 import React from 'react';
-import { [] } from 'react-lazy-load-image-component';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import content from '../content';
@@ -22,7 +22,7 @@ export default function Stack() {
                 index % 2 !== 0 ? 'animate-bounce' : 'animate-bounceFirst'
               }`}
             >
-              <[] effect="blur" src={tech.img} alt={tech.alt} />
+              <LazyLoadImage effect="blur" src={tech.img} alt={tech.alt} />
             </span>
           ))}
         </div>
