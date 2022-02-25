@@ -1,6 +1,6 @@
 import React from 'react';
 import Typical from 'react-typical';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { [] } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import content from '../content';
 import useStartAnimation from '../hook/useStartAnimation';
@@ -21,7 +21,7 @@ export default function Header() {
     >
       <div className="flex flex-col items-center justify-center md:flex-row-reverse md:w-10/12 md:justify-between">
         <div className="w-full md:w-2/5 ">
-          <LazyLoadImage
+          <[]
             src={content.header.img}
             alt="profile"
             className={`w-full mx-auto`}

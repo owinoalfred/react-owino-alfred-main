@@ -1,5 +1,5 @@
 import React from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { [] } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import content from '../content';
@@ -12,7 +12,7 @@ export default function Stack() {
         background: '#eee',
       }}
     >
-      <h1 className="text-5xl font-dosis font-bold mb-10">Stack I Use</h1>
+      <h1 className="text-5xl font-dosis font-bold mb-10">The Stack that I Use</h1>
       <div>
         <div className="flex flex-wrap justify-center">
           {content.stack.tech.map((tech, index) => (
@@ -22,7 +22,7 @@ export default function Stack() {
                 index % 2 !== 0 ? 'animate-bounce' : 'animate-bounceFirst'
               }`}
             >
-              <LazyLoadImage effect="blur" src={tech.img} alt={tech.alt} />
+              <[] effect="blur" src={tech.img} alt={tech.alt} />
             </span>
           ))}
         </div>

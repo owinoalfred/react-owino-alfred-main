@@ -1,23 +1,23 @@
-import React from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
-import content from '../content';
-import useWindowPosition from '../hook/useWindowPosition';
+import React from "react";
+import { [] } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import content from "../content";
+import useWindowPosition from "../hook/useWindowPosition";
 
 export default function Work() {
-  const animated = useWindowPosition('header', 0.6);
+  const animated = useWindowPosition("header", 0.6);
   return (
     <div
       className="min-h-screen flex justify-center items-center flex-col"
       style={{
-        background: '#FEFEFE',
+        background: "#FEFEFE",
       }}
       id="mywork"
     >
       <h1 className="text-5xl font-dosis font-bold">{content.work.title}</h1>
-      <p className="text-gray-600 text-2xl font-dosis mb-10">I have done</p>
+      <p className="text-gray-600 text-2xl font-dosis mb-10">I have created</p>
       <div className="flex flex-col md:flex-row justify-between items-center w-11/12 ">
-        <LazyLoadImage
+        <[]
           effect="blur"
           placeholderSrc={content.work.imgPlaceholder}
           src={content.work.img}
@@ -27,46 +27,106 @@ export default function Work() {
         <div
           className="transtion duration-2000 ease-in-out p-10 max-w-xl lg:max-w-3xl rounded-lg hidden md:block"
           style={{
-            border: '1px solid #e5ecf9',
+            border: "1px solid #e5ecf9",
             transform: animated
-              ? 'translate(-10%, 0%) rotate3d(0.540, -0.95, 0, 22deg) rotateZ(7deg)'
-              : '',
+              ? "translate(-10%, 0%) rotate3d(0.540, -0.95, 0, 22deg) rotateZ(8deg)"
+              : "",
             boxShadow:
-              '35px 50px 90px -25px rgba(50, 50, 95, 0.5), 20px 35px 75px -35px rgba(0, 0, 0, 0.5)',
+              "35px 50px 90px -25px rgba(50, 50, 95, 0.5), 20px 35px 75px -35px rgba(0, 0, 0, 0.5)",
           }}
         >
-          <ProjectDetail />
+          <ProjectDetail1 />
+          <ProjectDetail2 />
+          <ProjectDetail3 />
         </div>
-        <div className="flex justify-center items-center md:hidden">
-          <ProjectDetail />
-        </div>
+       
       </div>
     </div>
+    
+
   );
 }
 
-const ProjectDetail = () => {
-  const animated = useWindowPosition('header', 0.6);
+
+const ProjectDetail1 = () => {
+  const animated = useWindowPosition("header", 0.6);
   return (
     <div>
       <h1
-        className={` ${
-          animated ? '' : 'translate-y-10 opacity-0'
-        }   transform transition duration-2000 inline-block m-4  font-dosis text-xl font-bold`}
+        className={` ${animated ? "" : "translate-y-10 opacity-0"
+          }   transform transition duration-2000 inline-block m-4  font-dosis text-xl font-bold`}
       >
-        {content.work.projectName}
+        {content.work.projectName1}
       </h1>
       <p
-        className={`${
-          animated ? '' : 'translate-y-10 opacity-0'
-        }  transform transition duration-2000 inline-block w-11/12 m-4  text-xl font-dosis`}
+        className={`${animated ? "" : "translate-y-10 opacity-0"
+          }  transform transition duration-2000 inline-block w-11/12 m-4  text-xl font-dosis`}
       >
-        {content.work.desc}
+        {content.work.desc1}
       </p>
       <button
-        className={`${
-          animated ? '' : 'translate-y-10 opacity-0'
-        } transform transition duration-2000  px-20 py-3 m-4 bg-black flex justify-around text-white rounded-lg shadow-2xl`}
+        className={`${animated ? "" : "translate-y-10 opacity-0"
+          } transform transition duration-2000  px-20 py-3 m-4 bg-black flex justify-around text-white rounded-lg shadow-2xl`}
+      >
+        <img
+          src="https://timo.engineer/assets/icons/rocket.svg"
+          alt="rocket"
+          className="mr-5"
+        />
+        <p className="text-lg">Website</p>
+      </button>
+    </div>
+  );
+};
+const ProjectDetail2 = () => {
+  const animated = useWindowPosition("header", 0.6);
+  return (
+    <div>
+      <h1
+        className={` ${animated ? "" : "translate-y-10 opacity-0"
+          }   transform transition duration-2000 inline-block m-4  font-dosis text-xl font-bold`}
+      >
+        {content.work.projectName2}
+      </h1>
+      <p
+        className={`${animated ? "" : "translate-y-10 opacity-0"
+          }  transform transition duration-2000 inline-block w-11/12 m-4  text-xl font-dosis`}
+      >
+        {content.work.desc2}
+      </p>
+      <button
+        className={`${animated ? "" : "translate-y-10 opacity-0"
+          } transform transition duration-2000  px-20 py-3 m-4 bg-black flex justify-around text-white rounded-lg shadow-2xl`}
+      >
+        <img
+          src="https://timo.engineer/assets/icons/rocket.svg"
+          alt="rocket"
+          className="mr-5"
+        />
+        <p className="text-lg">Website</p>
+      </button>
+    </div>
+  );
+};
+const ProjectDetail3 = () => {
+  const animated = useWindowPosition("header", 0.6);
+  return (
+    <div>
+      <h1
+        className={` ${animated ? "" : "translate-y-10 opacity-0"
+          }   transform transition duration-2000 inline-block m-4  font-dosis text-xl font-bold`}
+      >
+        {content.work.projectName3}
+      </h1>
+      <p
+        className={`${animated ? "" : "translate-y-10 opacity-0"
+          }  transform transition duration-2000 inline-block w-11/12 m-4  text-xl font-dosis`}
+      >
+        {content.work.desc3}
+      </p>
+      <button
+        className={`${animated ? "" : "translate-y-10 opacity-0"
+          } transform transition duration-2000  px-20 py-3 m-4 bg-black flex justify-around text-white rounded-lg shadow-2xl`}
       >
         <img
           src="https://timo.engineer/assets/icons/rocket.svg"
