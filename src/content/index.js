@@ -19,7 +19,7 @@ export default {
       2000,
       'a full-stack web developer. ✔',
       2000,
-      'Mobile Developer.🧨',
+      'a Mobile Developer.🧨',
       2000,
       'a programmer. 💻',
       2000,
